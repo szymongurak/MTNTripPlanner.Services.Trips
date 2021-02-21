@@ -1,12 +1,12 @@
-@url = https://localhost:44344
+@url = http://localhost:5001
 
 @resourceId = 00000000-0000-0000-0000-000000000000
 @customerId = 00000000-0000-0000-0000-000000000000
-@dateTime = 2020-01-10
+@dateTime = 2020-03-10
 @tags = ["vehicle", "armor"]
 
 
-@tripId = 30000000-0000-0000-0000-000000000000
+@tripId = 40000000-0000-0000-0000-000000000000
 @destination = bieszczady
 @difficultyLevel = 1
 @test = aaaa
