@@ -1,0 +1,62 @@
+@url = https://localhost:44344
+
+@resourceId = 00000000-0000-0000-0000-000000000000
+@customerId = 00000000-0000-0000-0000-000000000000
+@dateTime = 2020-01-10
+@tags = ["vehicle", "armor"]
+
+
+@tripId = 30000000-0000-0000-0000-000000000000
+@destination = bieszczady
+@difficultyLevel = 1
+@test = aaaa
+
+###
+GET {{url}}/resources?tags={{tags}}&matchAllTags=false
+
+###
+GET {{url}}/trips?destination={{destination}}
+
+###
+GET {{url}}/trips
+###
+GET {{url}}/trips/{{tripId}}
+
+###
+GET {{url}}/trips
+
+###
+POST {{url}}/api/trips
+Content-Type: application/json
+
+{
+  "test": "{{test}}"
+}
+
+###
+POST {{url}}/trips
+Content-Type: application/json
+
+{
+  "tripId": "{{tripId}}",
+  "destination": "{{destination}}",
+  "date": "{{dateTime}}",
+  "difficultyLevel": "{{difficultyLevel}}"
+}
+
+###
+POST {{url}}/resources/{{resourceId}}/reservations/{{dateTime}}
+Content-Type: application/json
+
+{
+  "resourceId": "{{resourceId}}",
+  "customerId": "{{customerId}}",
+  "dateTime": "{{dateTime}}",
+  "priority": 0
+}
+
+###
+DELETE {{url}}/resources/{{resourceId}}/reservations/{{dateTime}}
+
+###
+DELETE {{url}}/resources/{{resourceId}}

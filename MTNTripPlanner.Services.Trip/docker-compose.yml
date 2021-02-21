@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  mongodb_container:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
+    networks:
+      - mtntrip_network
+  mtntrip_app:
+    build: .
+    ports: 
+      - "5050:5050"
+    networks:
+      - mtntrip_network
+
+volumes:
+  mongodb_data_container:
+networks:
+  mtntrip_network:
+    name: mtntrip_network
