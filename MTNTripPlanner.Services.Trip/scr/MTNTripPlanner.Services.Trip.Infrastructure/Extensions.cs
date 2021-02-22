@@ -11,6 +11,7 @@ using Convey.WebApi.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using MTNTripPlanner.Services.Trip.Application;
+using MTNTripPlanner.Services.Trip.Application.Events;
 using MTNTripPlanner.Services.Trip.Application.Services;
 using MTNTripPlanner.Services.Trip.Core.Repositories;
 using MTNTripPlanner.Services.Trip.Infrastructure.Exceptions;
@@ -24,9 +25,16 @@ namespace MTNTripPlanner.Services.Trip.Infrastructure
     {
         public static IConveyBuilder AddInfrastructure(this IConveyBuilder builder)
         {
+            builder.Services.AddSingleton<IEventMapper, EventMapper>();
             builder.Services.AddTransient<ITripRepository, TripsMongoRepository>();
             builder.Services.AddTransient<IMessageBroker, MessageBroker>();
-            builder.Services.AddSingleton<IEventMapper, EventMapper>();
+            builder.Services.AddTransient<IEventProcessor, EventProcessor>();
+            
+
+            builder.Services.Scan(s => s.FromAssemblies(AppDomain.CurrentDomain.GetAssemblies())
+                .AddClasses(c => c.AssignableTo(typeof(IDomainEventHandler<>)))
+                .AsImplementedInterfaces()
+                .WithTransientLifetime());
             
             builder
                 .AddQueryHandlers()    
