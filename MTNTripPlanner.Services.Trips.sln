@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTNTripPlanner.Services.Trip.Core", "src\MTNTripPlanner.Services.Trip.Core\MTNTripPlanner.Services.Trip.Core.csproj", "{045EB2B9-E78D-491E-B3E1-5E6B4B3506E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTNTripPlanner.Services.Trip.Application", "src\MTNTripPlanner.Services.Trip.Application\MTNTripPlanner.Services.Trip.Application.csproj", "{A2D4E2D1-A399-4FF1-91DC-5E536CD6FA3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTNTripPlanner.Services.Trip.Infrastructure", "src\MTNTripPlanner.Services.Trip.Infrastructure\MTNTripPlanner.Services.Trip.Infrastructure.csproj", "{E99D06DA-7A85-409A-8533-95BE0B5A8208}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTNTripPlanner.Services.Trip.Api", "src\MTNTripPlanner.Services.Trip.Api\MTNTripPlanner.Services.Trip.Api.csproj", "{D6623E57-C01C-414C-9753-AA7AD928F420}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{045EB2B9-E78D-491E-B3E1-5E6B4B3506E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{045EB2B9-E78D-491E-B3E1-5E6B4B3506E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{045EB2B9-E78D-491E-B3E1-5E6B4B3506E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{045EB2B9-E78D-491E-B3E1-5E6B4B3506E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2D4E2D1-A399-4FF1-91DC-5E536CD6FA3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2D4E2D1-A399-4FF1-91DC-5E536CD6FA3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2D4E2D1-A399-4FF1-91DC-5E536CD6FA3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2D4E2D1-A399-4FF1-91DC-5E536CD6FA3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E99D06DA-7A85-409A-8533-95BE0B5A8208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E99D06DA-7A85-409A-8533-95BE0B5A8208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E99D06DA-7A85-409A-8533-95BE0B5A8208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E99D06DA-7A85-409A-8533-95BE0B5A8208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6623E57-C01C-414C-9753-AA7AD928F420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6623E57-C01C-414C-9753-AA7AD928F420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6623E57-C01C-414C-9753-AA7AD928F420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6623E57-C01C-414C-9753-AA7AD928F420}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -45,6 +45,7 @@ namespace MTNTripPlanner.Services.TripApi
                         .Get<GetTrips, IEnumerable<TripDto>>("trips")
                         .Get<GetTrip, TripDto>("trips/{tripId}")
                         .Post<AddTrip>("trips", afterDispatch:(cmd, ctx) => ctx.Response.Created($"trips/{cmd.TripId}"))
+                        .Post<JoinToTrip>("participant", afterDispatch:(cmd, ctx) => ctx.Response.Created($"participants/{cmd.UserId}"))
                     )
                 );
     }

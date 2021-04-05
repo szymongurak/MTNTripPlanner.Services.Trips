@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Convey.Types;
 using MTNTripPlanner.Services.Trip.Core.Entities;
 
@@ -11,5 +12,6 @@ namespace MTNTripPlanner.Services.Trip.Infrastructure.Mongo.Documents
         public string Destination { get; set; }
         public int TimeStamp { get; set; }
         public TripDifficultyLevelEnum DifficultyLevel { get; set; }
+        public IEnumerable<ParticipantDocument> Participants { get; set; }
     }
 }

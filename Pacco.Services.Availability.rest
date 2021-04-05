@@ -6,8 +6,9 @@
 @tags = ["vehicle", "armor"]
 
 
-@tripId = 40000000-0000-0000-0000-000000000000
-@destination = bieszczady
+@tripId = 46000000-0000-0000-0000-000000000000
+@userId = 10000000-0000-0000-0000-000000000000
+@destination = gorce
 @difficultyLevel = 1
 @test = aaaa
 
@@ -42,6 +43,15 @@ Content-Type: application/json
   "destination": "{{destination}}",
   "date": "{{dateTime}}",
   "difficultyLevel": "{{difficultyLevel}}"
+}
+
+###
+POST {{url}}/participant
+Content-Type: application/json
+
+{
+  "tripId": "{{tripId}}",
+  "userId": "{{userId}}"
 }
 
 ###

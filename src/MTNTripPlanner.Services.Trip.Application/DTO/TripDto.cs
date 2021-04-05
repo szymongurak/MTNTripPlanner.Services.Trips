@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using MTNTripPlanner.Services.Trip.Core.Entities;
 
 namespace MTNTripPlanner.Services.Trip.Application.DTO
@@ -9,5 +10,6 @@ namespace MTNTripPlanner.Services.Trip.Application.DTO
         public string Destination { get; set; }
         public DateTime Date { get; set; }
         public TripDifficultyLevelEnum DifficultyLevel { get; set; }
+        public IEnumerable<ParticipantDto> Participants { get; set; }
     }
 }
